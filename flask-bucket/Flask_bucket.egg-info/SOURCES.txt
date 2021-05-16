@@ -1,8 +1,0 @@
-setup.py
-flask-bucket/Flask_bucket.py
-flask-bucket/Flask_bucket.egg-info/PKG-INFO
-flask-bucket/Flask_bucket.egg-info/SOURCES.txt
-flask-bucket/Flask_bucket.egg-info/dependency_links.txt
-flask-bucket/Flask_bucket.egg-info/not-zip-safe
-flask-bucket/Flask_bucket.egg-info/requires.txt
-flask-bucket/Flask_bucket.egg-info/top_level.txt
