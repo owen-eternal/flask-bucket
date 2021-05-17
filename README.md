@@ -1,20 +1,21 @@
 # flask-bucket
 
-An extension that uses the flasks command line interface to build a module in your project directory. 
+Flask-Bucket is an extension that generates a module in your project directory using the flask command line interface. 
 
-# installation
+## installation
 
-Run the following to install:
+Run the following command to install the package:
 1. Python pip install flask-bucket
 
-# Usage
+## Usage
 
-Import package:
-1. from flask_bucket import FlaskBucket 
+Import and initialize package:
 
-Initialize package: 
+from flask_bucket import FlaskBucket 
+
 app = Flask(__name__)
 FlaskBucket(app)
 
-Run command to create a module:
-flask make_module <module_name>
+Run the make_module command and specify the name of the directory from an interactive Python shell to initialize your module.
+
+>>> flask make_module <directory_name>
