@@ -4,7 +4,7 @@ Flask-Bucket is an extension that uses the flask command line interface to creat
 
 ## Installation
 
-Run the following command to install the package:
+Run the following command to install:
 
 ```python
 >>> Python pip install flask-bucket
