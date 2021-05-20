@@ -6,8 +6,8 @@ Flask-Bucket is an extension that uses the flask command line interface to creat
 
 Run the following command to install:
 
-```python
->>> Python pip install flask-bucket
+```bash
+$ Python pip install flask-bucket
 ```
 ## Usage
 
@@ -15,7 +15,6 @@ Run the following command to install:
 2. Import your module and register your blueprint object.  
 
 ```python
-
 from flask_bucket import FlaskBucket 
 
 def create_app():
@@ -32,6 +31,15 @@ def create_app():
 Initialize your module by running the **make_module** command from an interactive Python shell and specify the name of the directory. **Note** The package automatically produces a blueprint and a routes layout inside your
 **routes.py** file, located inside the module.
 
-```python
->>> flask make_module <directory_name>
+```bash
+$ flask make_module <directory_name>
+```
+
+# Developing flask-bucket
+
+To install flask-bucket along with the tools you need to develop and run tests, run the following in your virtual
+enviroment.
+
+```bash
+$ pip install -e .[dev]
 ```

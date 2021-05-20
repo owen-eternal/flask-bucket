@@ -1,12 +1,56 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: Flask-bucket
-Version: 1.0
-Summary: Create flask modules using the command line interface
+Version: 0.0.1
+Summary: Create flask modules using a flask shell command
 Home-page: https://github.com/owen-eternal/flask-bucket
 Author: Owen O. Phakade
 Author-email: olwethuphakade89@gmail.com
 License: BSD
-Description: UNKNOWN
+Description: # flask-bucket
+        
+        Flask-Bucket is an extension that uses the flask command line interface to create a module inside your project directory. It comes in handy when operating in a flask application factory configuaration. 
+        
+        ## Installation
+        
+        Run the following command to install:
+        
+        ```bash
+        $ Python pip install flask-bucket
+        ```
+        ## Usage
+        
+        1. Import and initialize the package inside the **create_app** function.
+        2. Import your module and register your blueprint object.  
+        
+        ```python
+        from flask_bucket import FlaskBucket 
+        
+        def create_app():
+        
+            app = Flask(__name__)
+            FlaskBucket(app)
+            
+            from .<module_name>.routes import <blueprint_name>
+            app.registerblueprint(<blueprint_name>)
+        
+            return app
+        ```
+        
+        Initialize your module by running the **make_module** command from an interactive Python shell and specify the name of the directory. **Note** The package automatically produces a blueprint and a routes layout inside your
+        **routes.py** file, located inside the module.
+        
+        ```bash
+        $ flask make_module <directory_name>
+        ```
+        
+        # Developing flask-bucket
+        
+        To install flask-bucket along with the tools you need to develop and run tests, run the following in your virtual
+        enviroment.
+        
+        ```bash
+        $ pip install -e .[dev]
+        ```
 Platform: any
 Classifier: Environment :: Web Environment
 Classifier: Intended Audience :: Developers
@@ -15,3 +59,5 @@ Classifier: Operating System :: OS Independent
 Classifier: Programming Language :: Python >= 3.6+
 Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: Text/markdown
+Provides-Extra: dev
