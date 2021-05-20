@@ -1,4 +1,8 @@
+from typing import Text
 from setuptools import setup
+
+with open("README.md", "r") as f:
+    long_description = f.read()
 
 setup(
     name='Flask-bucket',
@@ -8,7 +12,8 @@ setup(
     author='Owen O. Phakade',
     author_email='olwethuphakade89@gmail.com',
     description='Create flask modules using a flask shell command',
-    long_description=__doc__,
+    long_description=long_description,
+    long_description_content_type="Text/markdown",
     py_modules=['Flask_bucket'],
     package_dir={'': 'flask-bucket'},
     zip_safe=False,
@@ -17,6 +22,10 @@ setup(
     install_requires=[
         'Flask'
     ],
+    extras_require={"dev" : [
+        "pytest>=3.7"     
+    ]},
+
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
